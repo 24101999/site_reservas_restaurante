@@ -1,0 +1,42 @@
+.cadastro {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    input {
+      border-radius: 5px;
+      background: none;
+      border: 1px solid;
+      outline: none;
+    }
+    button {
+      border-radius: 5px;
+      background: none;
+      border: 1px solid;
+      outline: none;
+      width: 100%;
+      padding: 10px 20px;
+      &:hover {
+        background-color: #ffffffa8;
+      }
+    }
+  }
+}
+.red {
+  background-color: red;
+}
