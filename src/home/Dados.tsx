@@ -18,7 +18,7 @@ const Dados = (props: Props) => {
 
   useEffect(() => {
     axios
-      .get(`https://henriquedeveloper.com.br/admin/dado.php?id=${id}`)
+      .get(`https://henriquedeveloper.com.br/back/admin/dado.php?id=${id}`)
       .then((res) => {
         setDados(res.data);
       });
@@ -34,18 +34,16 @@ const Dados = (props: Props) => {
                 <h1 style={{ textAlign: "center", color: "#fff" }}>
                   Mesa {id}
                 </h1>
-                <div className="">
-                  <h3>Nome</h3>
-                  <p>{d.nome}</p>
-                </div>
-                <div className="">
-                  <h3>Hora</h3>
-                  <p>{d.hora}</p>
-                </div>
-                <div className="">
-                  <h3>dia</h3>
-                  <p>{d.dia}</p>
-                </div>
+
+                <p>
+                  Nome: <strong>{d.nome}</strong>
+                </p>
+                <p>
+                  Hora: <strong>{d.hora}</strong>
+                </p>
+                <p>
+                  Dia: <strong>{d.dia}</strong>
+                </p>
               </div>
             );
           })

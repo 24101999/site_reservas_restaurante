@@ -21,7 +21,7 @@ const Admin = (props: Props) => {
     }
     axios
       .post(
-        "https://henriquedeveloper.com.br/login/",
+        "https://henriquedeveloper.com.br/back/login/",
         { email, senha },
         {
           headers: {
