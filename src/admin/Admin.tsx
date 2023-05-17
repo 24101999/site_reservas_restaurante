@@ -2,8 +2,7 @@ import React, { ChangeEvent, useState } from "react";
 import styles from "./Admin.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Session } from "inspector";
-import { setgid } from "process";
+
 type Props = {};
 
 const Admin = (props: Props) => {
