@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import React, { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 type Props = {};
@@ -14,13 +14,13 @@ const Home = (props: Props) => {
   const [mesa, setMesa] = useState<string>("");
   const [msg, setMsg] = useState<string>("");
   const regEx = /^[a-z à-ú À-Ú]+$/i;
-  const nav = useNavigate();
+  const lkn = useNavigate();
   useEffect(() => {
     const el: ss<any> = sessionStorage.getItem("dado");
     if (!el) {
-      nav("/login");
+      lkn("/login");
     } else {
-      nav("/home");
+      lkn("/home");
     }
   }, []);
 
@@ -115,7 +115,7 @@ const Home = (props: Props) => {
           <option value="14">mesa 14</option>
           <option value="15">mesa 15</option>
         </select>
-        <button onClick={() => nav(`/dado/${dadoUnico}`)}>ver mesa</button>
+        <button onClick={() => lkn(`/dado/${dadoUnico}`)}>ver mesa</button>
       </div>
       <form onSubmit={sub}>
         <label>
