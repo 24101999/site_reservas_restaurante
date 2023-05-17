@@ -1,4 +1,7 @@
 .cadastro {
+  background-image: url("../bife-grelhado-na-superficie-de-madeira-escura.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -8,7 +11,19 @@
   left: 0;
   right: 0;
 }
+.cadastro h1 {
+  color: #fff;
+}
+.cadastro h3 {
+  background-color: rgba(0, 0, 0, 0.582);
+  border-radius: 5px;
+  padding: 5px;
+}
 .cadastro form {
+  background-color: rgba(0, 0, 0, 0.582);
+  padding: 4rem;
+  border-radius: 5px;
+  color: #fff;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -16,17 +31,26 @@
   align-items: center;
 }
 .cadastro form label {
+  color: #fff;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 .cadastro form input {
+  color: #fff;
   border-radius: 5px;
   background: none;
   border: 1px solid;
   outline: none;
 }
+.cadastro form input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8784313725);
+}
+.cadastro form input::placeholder {
+  color: rgba(255, 255, 255, 0.8784313725);
+}
 .cadastro form button {
+  color: #fff;
   border-radius: 5px;
   background: none;
   border: 1px solid;

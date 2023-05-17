@@ -1,0 +1,28 @@
+.dados {
+  background-image: url("../interior-do-restaurante.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+.dados .dado {
+  height: 250px;
+  width: 200px;
+  text-align: center;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 5px;
+}/*# sourceMappingURL=dados.module.css.map */
