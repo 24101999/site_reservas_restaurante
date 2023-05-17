@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./dados.module.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -22,7 +22,7 @@ const Dados = (props: Props) => {
       .then((res) => {
         setDados(res.data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.dados}>

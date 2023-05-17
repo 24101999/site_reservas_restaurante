@@ -22,7 +22,7 @@ const Home = (props: Props) => {
     } else {
       lkn("/home");
     }
-  }, []);
+  }, [el, lkn]);
 
   const sub = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
