@@ -16,7 +16,7 @@ function App() {
           <Route path="/dado/:id" element={<Dados />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Admin />} />
-          {/* <Route path="/" element={<Admin />} /> */}
+          <Route path="/" element={<Admin />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
