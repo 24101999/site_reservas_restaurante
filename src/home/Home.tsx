@@ -33,7 +33,7 @@ const Home = (props: Props) => {
     }
     axios
       .post(
-        "https://henriquedeveloper.com.br/admin/insert.php",
+        "https://henriquedeveloper.com.br/back/admin/insert.php",
         {
           mesa,
           hora,
@@ -74,7 +74,7 @@ const Home = (props: Props) => {
 
   const gerar = () => {
     // e.preventDefault();
-    axios.get("https://henriquedeveloper.com.br/admin/gerar.php");
+    axios.get("https://henriquedeveloper.com.br/back/admin/gerar.php");
     alert("dado gerado");
   };
 
