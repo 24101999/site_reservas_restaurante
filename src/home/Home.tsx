@@ -15,8 +15,8 @@ const Home = (props: Props) => {
   const [msg, setMsg] = useState<string>("");
   const regEx = /^[a-z à-ú À-Ú]+$/i;
   const lkn = useNavigate();
+  const el: ss<any> = sessionStorage.getItem("dado");
   useEffect(() => {
-    const el: ss<any> = sessionStorage.getItem("dado");
     if (!el) {
       lkn("/login");
     } else {

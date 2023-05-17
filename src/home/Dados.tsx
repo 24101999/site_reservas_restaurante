@@ -14,8 +14,8 @@ interface d {
 const Dados = (props: Props) => {
   const [dados, setDados] = useState<Array<d>>();
   const param = useParams();
-
   const id = param.id;
+
   useEffect(() => {
     axios
       .get(`https://henriquedeveloper.com.br/admin/dado.php?id=${id}`)
