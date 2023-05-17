@@ -17,9 +17,11 @@ const Dados = (props: Props) => {
 
   const id = param.id;
   useEffect(() => {
-    axios.get(`http://localhost:1999/admin/dado.php?id=${id}`).then((res) => {
-      setDados(res.data);
-    });
+    axios
+      .get(`https://henriquedeveloper.com.br/admin/dado.php?id=${id}`)
+      .then((res) => {
+        setDados(res.data);
+      });
   }, []);
 
   return (

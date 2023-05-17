@@ -29,7 +29,7 @@ const Cadastro = (props: Props) => {
       setSenha("");
       axios
         .post(
-          "http://localhost:1999/login/insert.php",
+          "https://henriquedeveloper.com.br/login/insert.php",
           { email, senha },
           {
             headers: {
