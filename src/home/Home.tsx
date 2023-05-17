@@ -19,7 +19,7 @@ const Home = (props: Props) => {
   const nav = useNavigate();
   useEffect(() => {
     const el: ss<any> = sessionStorage.getItem("dado");
-    setDado(el);
+    // setDado(el);
     if (!el) {
       nav("/login");
     } else {
