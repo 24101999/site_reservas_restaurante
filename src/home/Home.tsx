@@ -7,7 +7,6 @@ type Props = {};
 type ss<T extends string> = T;
 
 const Home = (props: Props) => {
-  const [dado, setDado] = useState<string>("");
   const [dadoUnico, setDadoUnico] = useState<string>("");
   const [dia, setDia] = useState<string>("");
   const [nome, setNome] = useState<string>("");
@@ -18,7 +17,6 @@ const Home = (props: Props) => {
   const nav = useNavigate();
   useEffect(() => {
     const el: ss<any> = sessionStorage.getItem("dado");
-    // setDado(el);
     if (!el) {
       nav("/login");
     } else {
