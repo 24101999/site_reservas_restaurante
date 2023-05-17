@@ -34,9 +34,18 @@ const Dados = (props: Props) => {
                 <h1 style={{ textAlign: "center", color: "#fff" }}>
                   Mesa {id}
                 </h1>
-                <p>{d.nome}</p>
-                <p>{d.hora}</p>
-                <p>{d.dia}</p>
+                <div className="">
+                  <h3>Nome</h3>
+                  <p>{d.nome}</p>
+                </div>
+                <div className="">
+                  <h3>Hora</h3>
+                  <p>{d.hora}</p>
+                </div>
+                <div className="">
+                  <h3>dia</h3>
+                  <p>{d.dia}</p>
+                </div>
               </div>
             );
           })
