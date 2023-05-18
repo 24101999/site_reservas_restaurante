@@ -16,9 +16,7 @@ const Admin = (props: Props) => {
 
   const sub = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!email || !senha) {
-      setMs("Campo vazio");
-    }
+
     axios
       .post(
         "https://henriquedeveloper.com.br/back/login/",
@@ -30,6 +28,9 @@ const Admin = (props: Props) => {
         }
       )
       .then((res) => {
+        if (!email || !senha) {
+          setMs("Campo vazio");
+        }
         if (!regEmail.test(email) && !regSenha.test(senha)) {
           nav("/login");
           sessionStorage.setItem("dado", "");
@@ -44,6 +45,7 @@ const Admin = (props: Props) => {
           nav("/home");
         }
       });
+
     setEmail("");
     setSenha("");
   };
