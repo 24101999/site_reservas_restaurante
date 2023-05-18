@@ -72,7 +72,7 @@ const Admin = (props: Props) => {
           <input
             value={senha}
             placeholder={ms}
-            type="text"
+            type="password"
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               setSenha(e.target.value)
             }
