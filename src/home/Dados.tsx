@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./dados.module.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Voltar from "./Voltar";
 type Props = {};
 
 interface d {
@@ -15,7 +16,6 @@ const Dados = (props: Props) => {
   const [dados, setDados] = useState<Array<d>>();
   const param = useParams();
   const id = param.id;
-
   useEffect(() => {
     axios
       .get(`https://henriquedeveloper.com.br/back/admin/dado.php?id=${id}`)
@@ -27,27 +27,27 @@ const Dados = (props: Props) => {
   return (
     <div className={styles.dados}>
       ;
-      {dados
-        ? dados.map((d) => {
-            return (
-              <div key={d.id} className={styles.dado}>
-                <h1 style={{ textAlign: "center", color: "#fff" }}>
-                  Mesa {id}
-                </h1>
+      {dados ? (
+        dados.map((d) => {
+          return (
+            <div key={d.id} className={styles.dado}>
+              <h1 style={{ textAlign: "center", color: "#fff" }}>Mesa {id}</h1>
 
-                <p>
-                  Nome: <strong>{d.nome}</strong>
-                </p>
-                <p>
-                  Hora: <strong>{d.hora}</strong>
-                </p>
-                <p>
-                  Dia: <strong>{d.dia}</strong>
-                </p>
-              </div>
-            );
-          })
-        : ""}
+              <p>
+                Nome: <strong>{d.nome}</strong>
+              </p>
+              <p>
+                Hora: <strong>{d.hora}</strong>
+              </p>
+              <p>
+                Dia: <strong>{d.dia}</strong>
+              </p>
+            </div>
+          );
+        })
+      ) : (
+        <Voltar />
+      )}
     </div>
   );
 };
