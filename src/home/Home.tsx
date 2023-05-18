@@ -1,7 +1,8 @@
+import axios from "axios";
 import styles from "./Home.module.css";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
 type Props = {};
 
 type ss<T extends string> = T;
